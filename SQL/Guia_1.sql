@@ -18,9 +18,10 @@ select Nombre,Edad,Puesto from Jugador order by Edad asc, Camiseta desc;
 insert into Club (Club_Id,Nombre,Socios) values (6,'Rosario Central',25000);
 /* Ejercicio 10 */
 insert into Jugador (Jugador_Id,Nombre,Edad,Camiseta,Puesto,Club_Id) values (14,'Ramiro Fassi',26,2,'Defensor',6);
-select * from Jugador where Jugador_Id=14;
+select * from Jugador where Nombre='Ramiro Fassi';
 /* Ejercicio 11 */
 insert into Jugador (Jugador_Id,Nombre,Edad,Camiseta,Puesto,Club_Id) values (15,'Martín Palermo',28,9,'Delantero',23);
+/** ERROR: fallo el foreign key, no existe club_id 23! */
 /* Ejercicio 12 */
 update Jugador set Camiseta=10 where Nombre like '%Román%';
 select Nombre,Camiseta from Jugador where Nombre like '%Román%';
