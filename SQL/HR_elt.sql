@@ -1,0 +1,120 @@
+################################################################
+
+CREATE SCHEMA hr_elt;
+USE hr_elt;
+
+################################################################
+
+#################
+# Tabla REGIONS #
+#################
+
+CREATE TABLE REGIONS
+(
+	REGION_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	REGION_NAME VARCHAR(25),
+    CONSTRAINT REG_ID_PK PRIMARY KEY (REGION_ID)
+);
+
+################################################################
+
+###################
+# Tabla COUNTRIES #
+###################
+
+CREATE TABLE COUNTRIES
+(
+	COUNTRY_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	COUNTRY_NAME VARCHAR(40),
+	REGION_ID INT UNSIGNED,
+    CONSTRAINT COUNTRY_C_ID_PK PRIMARY KEY (COUNTRY_ID)
+);
+
+################################################################
+
+###################
+# Tabla LOCATIONS #
+###################
+
+CREATE TABLE LOCATIONS
+(
+	LOCATION_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	STREET_ADDRESS VARCHAR(40),
+	POSTAL_CODE VARCHAR(12),
+	CITY VARCHAR(30) NOT NULL,
+	STATE_PROVINCE VARCHAR(25),
+	COUNTRY_ID INT UNSIGNED NOT NULL,
+    CONSTRAINT LOC_ID_PK PRIMARY KEY (LOCATION_ID)
+);
+
+CREATE INDEX LOC_CITY_IX ON LOCATIONS
+(
+	CITY ASC
+);
+
+CREATE INDEX LOC_STATE_PROV_IX ON LOCATIONS
+(
+	STATE_PROVINCE ASC
+);
+
+CREATE INDEX LOC_COUNTRY_IX ON LOCATIONS
+(
+	COUNTRY_ID ASC
+);
+
+################################################################
+
+#####################
+# Tabla DEPARTMENTS #
+#####################
+
+CREATE TABLE DEPARTMENTS
+(
+	DEPARTMENT_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	DEPARTMENT_NAME VARCHAR(50) NOT NULL,
+	LOCATION_ID INT UNSIGNED,
+    CONSTRAINT DEPT_ID_PK PRIMARY KEY (DEPARTMENT_ID)
+);
+
+CREATE INDEX DEPT_LOCATION_IX ON DEPARTMENTS
+(
+	LOCATION_ID ASC
+);
+
+################################################################
+
+##############
+# CONEXIONES #
+##############
+
+ALTER TABLE DEPARTMENTS
+	ADD CONSTRAINT DEPT_LOC_FK FOREIGN KEY
+	(
+		LOCATION_ID
+	)
+	REFERENCES LOCATIONS
+	(
+		LOCATION_ID
+	);
+
+ALTER TABLE LOCATIONS
+	ADD CONSTRAINT LOC_C_ID_FK FOREIGN KEY
+	(
+		COUNTRY_ID
+	)
+	REFERENCES COUNTRIES
+	(
+		COUNTRY_ID
+	);
+
+ALTER TABLE COUNTRIES
+	ADD CONSTRAINT COUNTR_REG_FK FOREIGN KEY
+	(
+		REGION_ID
+	)
+	REFERENCES REGIONS
+	(
+		REGION_ID
+	);
+
+################################################################
