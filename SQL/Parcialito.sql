@@ -141,13 +141,15 @@ not in		(
 			);
 
 # OPCIONAL 2
-select		orderdetails.productCode									as Product,
+select		products.productName										as Product,
 			orderdetails.quantityOrdered								as Quantity,
 			orderdetails.priceEach										as UnitPrice,
-			order_subtotal.subtotal										as Subtotal
+			(orderdetails.quantityOrdered * orderdetails.priceEach)		as Subtotal
 from		orderdetails
-inner join	order_subtotal
-on			order_subtotal.orderNumber = orderdetails.orderNumber
-where		order_subtotal.orderNumber = 10175
+inner join	products
+on			orderdetails.productCode = products.productCode
+where		orderdetails.orderNumber = 10175
 group by	Product
 order by	orderdetails.orderLineNumber								asc;
+
+# OPCIONAL 3
