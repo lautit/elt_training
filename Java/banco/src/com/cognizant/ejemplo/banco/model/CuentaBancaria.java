@@ -10,18 +10,58 @@ public abstract class CuentaBancaria {
 	
 	public CuentaBancaria() {
 		numeroDeCuenta = nextID.getAndIncrement(); 
-		depositarDinero(0.0);
+		depositar(0.0);
 	}
 	
 	public CuentaBancaria(Double saldoInicial) {
 		numeroDeCuenta = nextID.getAndIncrement(); 
-		depositarDinero(saldoInicial);
+		depositar(saldoInicial);
 	}
 	
-	public abstract Double extraerDinero(Double extraer);
+	public abstract Double extraer(Double extraer);
 	
-	public void depositarDinero(Double deposito) {
+	public void depositar(Double deposito) {
 		saldo += deposito;
+	}
+	
+	public Integer getNumeroDeCuenta() {
+		return numeroDeCuenta;
+	}
+
+	@Override
+	public String toString() {
+		return "CuentaBancaria [numeroDeCuenta=" + numeroDeCuenta + ", saldo=" + saldo + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((numeroDeCuenta == null) ? 0 : numeroDeCuenta.hashCode());
+		result = prime * result + ((saldo == null) ? 0 : saldo.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CuentaBancaria other = (CuentaBancaria) obj;
+		if (numeroDeCuenta == null) {
+			if (other.numeroDeCuenta != null)
+				return false;
+		} else if (!numeroDeCuenta.equals(other.numeroDeCuenta))
+			return false;
+		if (saldo == null) {
+			if (other.saldo != null)
+				return false;
+		} else if (!saldo.equals(other.saldo))
+			return false;
+		return true;
 	}
 
 }

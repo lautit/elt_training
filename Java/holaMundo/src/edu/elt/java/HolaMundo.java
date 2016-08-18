@@ -1,28 +1,67 @@
 package edu.elt.java;
 
+import edu.elt.java.dao.GestorDePersonas;
+import edu.elt.java.dao.exceptions.GestorException;
+
+import java.util.ArrayList;
+
+import edu.elt.java.bo.Persona;
+
 public class HolaMundo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String frase = "Java es el mejor lenguaje de programación del mundo";
-		System.out.println(frase);
-		Integer caracteres = frase.length();
-		System.out.println(caracteres);
-		String fraseMayus = frase.toUpperCase();
-		System.out.println(fraseMayus);
-		String fraseConArroba = frase.replace(' ', '@');
-		System.out.println(fraseConArroba);
-		String[] palabras = frase.split(" ");
-		for (String palabra : palabras)
-			System.out.println(palabra);
-		Integer mejor = frase.indexOf("mejor");
-		System.out.println(mejor);
-		String subFrase = frase.substring(10, 20);
-		System.out.println(subFrase);
-		boolean empiezaCon = frase.startsWith("Java");
-		System.out.println(empiezaCon);
-		boolean mandarina = frase.equals("mandarina");
-		System.out.println(mandarina);
+		Persona mario = new Persona("Mario", "Petit", 31);
+		GestorDePersonas hr = new GestorDePersonas();
+		
+		try {
+			hr.alta(mario);
+		} catch (GestorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Persona esMario = null;
+		
+		try {
+			esMario = hr.buscar(mario.getIdPersona());
+			
+			System.out.println(esMario.toString());
+			System.out.println(mario.equals(esMario));
+			
+		} catch (GestorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		mario.setApellido("Gimenez");
+		
+		try {
+			hr.actualizar(mario);
+		} catch (GestorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		ArrayList<Persona> personas;
+		
+		try {
+			personas = hr.recuperarTodo();
+			
+			for(Persona persona : personas)
+				System.out.println("[MAIN] recuperarTodo - Resultado: " + persona.toString());
+			
+		} catch (GestorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			hr.baja(mario.getIdPersona());
+		} catch (GestorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("Puto el que lee.");
 	}
-
 }

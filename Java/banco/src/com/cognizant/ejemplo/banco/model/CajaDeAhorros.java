@@ -11,7 +11,7 @@ public class CajaDeAhorros extends CuentaBancaria {
 	}
 	
 	@Override
-	public Double extraerDinero(Double extraer) {
+	public Double extraer(Double extraer) {
 		if(extraer < saldo && extraer > 0) {
 			saldo -= extraer;
 			return extraer;

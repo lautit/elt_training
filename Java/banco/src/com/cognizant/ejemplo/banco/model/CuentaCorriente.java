@@ -15,7 +15,7 @@ public class CuentaCorriente extends CuentaBancaria {
 	}
 
 	@Override
-	public Double extraerDinero(Double extraer) {
+	public Double extraer(Double extraer) {
 		if(extraer < (saldo + descubierto) && extraer > 0) {
 			saldo -= extraer;
 			return extraer;
