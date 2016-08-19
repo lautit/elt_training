@@ -9,7 +9,7 @@ public class DBUtils {
 	public static Connection getConnection()
 			throws ClassNotFoundException, SQLException {
 		String driver = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/ejemplo";
+		String url = "jdbc:mysql://localhost:3306/evaluacion_java_tejerina";
 		
 		Class.forName(driver);
 		

@@ -1,27 +1,36 @@
 package edu.evalucion.java.objects;
 
 import java.sql.Date;
-import java.util.LinkedList;
+import java.util.HashSet;
 
 public class Pedido {
 
 	private Integer numeroPedido;
 	private String estado;
 	private Date fechaPedido;
-	private LinkedList<ItemPedido> items;
+	private HashSet<ItemPedido> items;
 	
 	public Pedido(String estado, Date fechaPedido) {
 		setNumeroPedido(0);
 		setEstado(estado);
 		setFechaPedido(fechaPedido);
-		items = new LinkedList<ItemPedido>();
+		items = new HashSet<ItemPedido>();
 	}
 	
 	public Pedido(Integer numeroPedido, String estado, Date fechaPedido) {
 		setNumeroPedido(numeroPedido);
 		setEstado(estado);
 		setFechaPedido(fechaPedido);
-		items = new LinkedList<ItemPedido>();
+		items = new HashSet<ItemPedido>();
+	}
+	
+	public Double calcularTotal() {
+		Double total = 0.0;
+		
+		for(ItemPedido item : items)
+			total = item.getCantidad() * item.getPrecioUnidad();
+		
+		return total;
 	}
 
 	public Integer getNumeroPedido() {
@@ -48,12 +57,15 @@ public class Pedido {
 		this.fechaPedido = fechaPedido;
 	}
 
-	public LinkedList<ItemPedido> getItems() {
+	public HashSet<ItemPedido> getItems() {
 		return items;
 	}
 
-	public void setItem(ItemPedido item) {
+	public void addItem(ItemPedido item) {
+		System.out.println("[PEDIDO] addItem - Pedido: " + getNumeroPedido());
+		System.out.println("[PEDIDO] addItem - Item: " + item.toString());
 		items.add(item);
+		System.out.println("");
 	}
 
 	@Override
@@ -68,10 +80,64 @@ public class Pedido {
 		builder.append(System.getProperty("line.separator"));
 		builder.append("Detalle de pedido:");
 		for(ItemPedido item : items) {
-			builder.append(System.getProperty("line.separator"));
-			builder.append(item.toString());
+			if(item != null) {
+				builder.append(System.getProperty("line.separator"));
+				builder.append(item.toString());
+			}
 		}
+		builder.append(System.getProperty("line.separator"));
+		builder.append("Total: " + calcularTotal());
 		return builder.toString();
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((numeroPedido == null) ? 0 : numeroPedido.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pedido other = (Pedido) obj;
+		if (estado == null) {
+			if (other.estado != null)
+				return false;
+		} else if (!estado.equals(other.estado))
+			return false;
+		if (fechaPedido == null) {
+			if (other.fechaPedido != null)
+				return false;
+		} else if (!fechaPedido.equals(other.fechaPedido))
+			return false;
+		if (items == null) {
+			if (other.items != null)
+				return false;
+		} else {
+			boolean itemsIguales = true;
+			
+			for(ItemPedido item : items) {
+				if(!other.items.contains(item)) {
+					itemsIguales = false;
+					break;
+				}
+			}
+			
+			return itemsIguales;
+		}
+		if (numeroPedido == null) {
+			if (other.numeroPedido != null)
+				return false;
+		} else if (!numeroPedido.equals(other.numeroPedido))
+			return false;
+		return true;
 	}
 	
 }

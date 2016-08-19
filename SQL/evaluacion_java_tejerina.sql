@@ -1,4 +1,6 @@
-CREATE DATABASE evaluacion_java_tejerina; 
+CREATE DATABASE evaluacion_java_tejerina;
+
+USE evaluacion_java_tejerina;
 
 CREATE TABLE productos 
   ( 
@@ -28,6 +30,49 @@ CREATE TABLE pedidoitems
      CONSTRAINT fk_pedidoitems_producto FOREIGN KEY (codigoproducto) REFERENCES 
      productos (codigoproducto) 
   );
+  
+##############################
+#           VIEWS            #
+##############################
+
+create view	detalle_pedidos
+as
+	select		productos.nombreproducto									as Producto,
+				pedidoitems.cantidad										as Cantidad,
+				productos.precio											as Precio,
+				(pedidoitems.cantidad * productos.precio)					as Subtotal
+	from		pedidoitems
+	inner join	productos
+	on			pedidoitems.codigoproducto = productos.codigoproducto
+	group by	Product
+	order by	pedidoitems.numeropedido									asc;
+
+##############################
+#      STORED PROCEDURES     #
+##############################
+
+DROP procedure IF EXISTS detalle_pedido;
+
+DELIMITER $$
+USE `evaluacion_java_tejerina`$$
+CREATE PROCEDURE `detalle_pedido` (IN p_numeropedido INT)
+BEGIN
+	SELECT		productos.nombreproducto								AS Producto,
+				pedidoitems.cantidad									AS Cantidad,
+				productos.precio										AS Precio,
+				(pedidoitems.cantidad * productos.precio)				AS Subtotal
+	FROM		pedidoitems
+	INNER JOIN	productos
+	ON			pedidoitems.codigoproducto = productos.codigoproducto
+	WHERE		pedidoitems.numeropedido = p_numeropedido
+	GROUP BY	Producto;
+END$$
+
+DELIMITER ;
+
+##############################
+#     TABLA DE PRODUCTOS     #
+##############################
 
 INSERT INTO productos 
             (codigoproducto,nombreproducto,precio) 

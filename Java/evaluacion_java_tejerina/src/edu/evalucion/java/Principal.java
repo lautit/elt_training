@@ -1,57 +1,53 @@
 package edu.evalucion.java;
 
-import java.sql.Date;
-import java.text.DateFormat;
-import java.util.Random;
-
 import edu.evalucion.java.dao.GestorDePedidos;
-import edu.evalucion.java.objects.ItemPedido;
+import edu.evalucion.java.dao.exceptions.GestorDePedidosException;
 import edu.evalucion.java.objects.Pedido;
+import edu.evalucion.java.utils.PedidoUtils;
 
 public class Principal {
-	
-	private static String estado1 = "Pendiente";
-	private static String estado2 = "Procesado";
-	private static String estado3 = "Entregado";
 
 	public static void main(String[] args) {
-		
 		GestorDePedidos gestorDePedidos = new GestorDePedidos();
+		PedidoUtils pedidoUtils = new PedidoUtils(gestorDePedidos);
 		
-		Pedido pedido1 = new Pedido(estado(), new Date(new java.util.Date().getTime()));
+		Pedido pedido1 = pedidoUtils.popular();
 		
-		pedido1.setItem(gestorDePedidos.|);
+		System.out.println("vamos a guardar un pedido");
 		
-		Pedido pedido2 = new Pedido(estado(), new Date(new java.util.Date().getTime()));
+		try {
+			gestorDePedidos.guardar(pedido1);
+			System.out.println("guarde el pedido 1");
+		} catch (GestorDePedidosException e) {
+			e.printStackTrace();
+		}
 		
+		System.out.println("ahora lo volvemos a recuperar");
 		
-		Pedido pedido3 = new Pedido(estado(), new Date(new java.util.Date().getTime()));
+		Pedido pedido2 = null;
 		
+		try {
+			pedido2 = gestorDePedidos.recuperarPedido(pedido1.getNumeroPedido());	
+		} catch (GestorDePedidosException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
+		System.out.println("recupere el pedido 1? a ver");
+		
+		if(pedido2 != null)
+			System.out.println("segun el equals() sobrecargado, pedido 1 es "
+					+ (pedido2.equals(pedido1) ? "igual" : "distinto")
+					+ " al pedido 2");
+		else
+			System.out.println("no me recupero nada!");
+		
+		System.out.println("esto es todo amigos");
+		
+		//Pedido pedido2 = pedidoUtils.popular();
+		
+		//Pedido pedido3 = pedidoUtils.popular();
 
 	}
-	
-	public static String estado() {
-        Random r = new Random();
-
-        int i = r.nextInt()%3;
-
-        switch (i) {
-            case 0:
-                return estado1;
-            case 1:
-                return estado2;
-            case 2:
-                return estado3;
-        }
-        
-		return estado1;
-    }
-	
-	public static Integer producto() {
-        Random r = new Random();
-        
-        return r.nextInt()%20 + 1;
-    }
 
 }
