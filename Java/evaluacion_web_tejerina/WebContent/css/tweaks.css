@@ -1,0 +1,12 @@
+body {
+	background: lightgrey;
+}
+
+a.no-underline {
+	color: black;
+	text-decoration: none;
+}
+
+a.no-underline:hover {
+	color: cornflowerblue;
+}
