@@ -1,0 +1,20 @@
+<tr>
+	<td>{{index}}</td>
+	<td>{{nombre}}</td>
+	<td>{{apellido}}</td>
+	<td>{{direccion}}</td>
+	<td>{{localidad}}</td>
+	<td>{{sexo}}</td>
+	<td>
+		<ul class="list-group">
+			{{#gustos}}
+			<li class="list-group-item">{{this}}</li>
+			{{/gustos}}
+		</ul>
+	</td>
+	<td>{{notas}}</td>
+	<td>
+		Ver Editar
+		<button class="eraseRow btn btn-warning">Borrar</button>
+	</td>
+</tr>

@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/form.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="css/tweaks.css" rel="stylesheet" type="text/css">
@@ -38,8 +38,9 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="section">
-		<div class="container">
+		<div class="container" id="main-container">
 			<div class="row">
 				<div class="col-md-12 page-header">
 					<h1>Formulario de Registro</h1>
@@ -131,7 +132,7 @@
 						<div class="form-group">
 							<div class="col-sm-10 col-sm-offset-2">
 								<button type="button" id="submitForm" class="btn btn-default btn-lg">Aceptar</button>
-								<button type="reset" class="btn btn-default btn-lg">Cancelar</button>
+								<button type="reset" id="resetForm" class="btn btn-default btn-lg">Cancelar</button>
 							</div>
 						</div>
 					</form>
@@ -139,8 +140,6 @@
 			</div>
 		</div>
 	</div>
-
-
 </body>
 
 </html>

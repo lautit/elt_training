@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html ng-app="holaMundoApp">
+  <head>
+	<script src="js/angular.js"></script>
+	<script src="js/hola_mundo_controller.js"></script>
+  </head>
+  <body>
+    <h2>Calculadora</h2>
+    <div ng-controller="HolaMundoController">
+      
+	  <input type="number" ng-model="numero1"><br>
+	  <input type="number" ng-model="numero2">
+	  <select ng-options="op as op.sym for op in ops" ng-model="op" ng-change="operar()"></select><br>
+	  <strong>{{resultado}}</span>
+	  
+    </div>
+	
+  </body>
+</html>
