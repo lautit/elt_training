@@ -1,0 +1,34 @@
+.login-view {
+	background-color: $background-color;
+	.top-content {
+		height: 66%;
+		.app-copy {
+			text-align: center;
+			padding-top: 13vh;
+		}
+		.app-logo {
+			font-size: 60px;
+			font-family: sans-serif;
+			font-weight: 600;
+			color: $login-color;
+			letter-spacing: 8px;
+			text-transform: uppercase;
+		}
+		.app-tagline {
+			font-size: 16px;
+			margin-top: 0px;
+			font-weight: 500;
+			color: rgba($login-color, 0.95);
+		}
+	}
+	.bottom-content {
+		height: 34%;
+		.google-sign-in {
+			border-radius: 4px;
+			font-weight: 500;
+			color: $google-red;
+			background-color: $auth-big-btn-bg;
+			border-color: darken($auth-big-btn-bg, 2);
+		}
+	}
+}

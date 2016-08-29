@@ -19,7 +19,7 @@
 					controller: 'LocationCtrl'
 				});
 
-			$urlRouterProvider.otherwise("/");
+			$urlRouterProvider .otherwise("/");
 
 		});
 
@@ -55,6 +55,7 @@
 					},
 					zoom: 8
 				};
+				
 				var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 				//Wait until the map is loaded

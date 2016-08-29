@@ -1,0 +1,12 @@
+{
+  "name": "oauth",
+  "app_id": "ef7d8d3b",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
