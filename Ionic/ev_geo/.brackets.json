@@ -1,0 +1,13 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ionic/js/ionic.bundle.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ionic/js/ionic.bundle.min.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ionic/js/ionic.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ionic/js/ionic.min.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ngCordova/dist/ng-cordova-mocks.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ngCordova/dist/ng-cordova-mocks.min.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ngCordova/dist/ng-cordova.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ngCordova/dist/ng-cordova.min.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-device/www/device.js"
+    ]
+}
