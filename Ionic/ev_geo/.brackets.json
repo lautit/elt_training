@@ -8,6 +8,7 @@
         "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ngCordova/dist/ng-cordova-mocks.min.js",
         "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ngCordova/dist/ng-cordova.js",
         "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/lib/ngCordova/dist/ng-cordova.min.js",
-        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-device/www/device.js"
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-device/www/device.js",
+        "C:/elt_training/Ionic/ev_geo/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-geolocation/www/android/geolocation.js"
     ]
 }
