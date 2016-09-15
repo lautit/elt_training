@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/proyectocapadatos/proyectocapadatos (1).iml" filepath="$PROJECT_DIR$/proyectocapadatos/proyectocapadatos (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectocapadatos/target/classes/META-INF/maven/edu.curso.java/proyectocapadatos/proyectocapadatos (2).iml" filepath="$PROJECT_DIR$/proyectocapadatos/target/classes/META-INF/maven/edu.curso.java/proyectocapadatos/proyectocapadatos (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectogeneral/proyectocapadatos/proyectocapadatos (3).iml" filepath="$PROJECT_DIR$/proyectogeneral/proyectocapadatos/proyectocapadatos (3).iml" group="proyectogeneral and modules" />
+      <module fileurl="file://$PROJECT_DIR$/proyectogeneral/proyectocapadatos/target/classes/META-INF/maven/edu.curso.java/proyectocapadatos/proyectocapadatos (4).iml" filepath="$PROJECT_DIR$/proyectogeneral/proyectocapadatos/target/classes/META-INF/maven/edu.curso.java/proyectocapadatos/proyectocapadatos (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectocapapresentacion/proyectocapapresentacion (1).iml" filepath="$PROJECT_DIR$/proyectocapapresentacion/proyectocapapresentacion (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectocapapresentacion/target/m2e-wtp/web-resources/META-INF/maven/edu.curso.java/proyectocapapresentacion/proyectocapapresentacion (2).iml" filepath="$PROJECT_DIR$/proyectocapapresentacion/target/m2e-wtp/web-resources/META-INF/maven/edu.curso.java/proyectocapapresentacion/proyectocapapresentacion (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectogeneral/proyectocapapresentacion/proyectocapapresentacion (3).iml" filepath="$PROJECT_DIR$/proyectogeneral/proyectocapapresentacion/proyectocapapresentacion (3).iml" group="proyectogeneral and modules" />
+      <module fileurl="file://$PROJECT_DIR$/proyectogeneral/proyectocapapresentacion/target/m2e-wtp/web-resources/META-INF/maven/edu.curso.java/proyectocapapresentacion/proyectocapapresentacion (4).iml" filepath="$PROJECT_DIR$/proyectogeneral/proyectocapapresentacion/target/m2e-wtp/web-resources/META-INF/maven/edu.curso.java/proyectocapapresentacion/proyectocapapresentacion (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectocapaservicio/proyectocapaservicio (1).iml" filepath="$PROJECT_DIR$/proyectocapaservicio/proyectocapaservicio (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectocapaservicio/target/classes/META-INF/maven/edu.curso.java/proyectocapaservicio/proyectocapaservicio (2).iml" filepath="$PROJECT_DIR$/proyectocapaservicio/target/classes/META-INF/maven/edu.curso.java/proyectocapaservicio/proyectocapaservicio (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectogeneral/proyectocapaservicio/proyectocapaservicio (3).iml" filepath="$PROJECT_DIR$/proyectogeneral/proyectocapaservicio/proyectocapaservicio (3).iml" group="proyectogeneral and modules" />
+      <module fileurl="file://$PROJECT_DIR$/proyectogeneral/proyectocapaservicio/target/classes/META-INF/maven/edu.curso.java/proyectocapaservicio/proyectocapaservicio (4).iml" filepath="$PROJECT_DIR$/proyectogeneral/proyectocapaservicio/target/classes/META-INF/maven/edu.curso.java/proyectocapaservicio/proyectocapaservicio (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectogeneral/proyectogeneral.iml" filepath="$PROJECT_DIR$/proyectogeneral/proyectogeneral.iml" group="proyectogeneral and modules" />
+    </modules>
+  </component>
+</project>

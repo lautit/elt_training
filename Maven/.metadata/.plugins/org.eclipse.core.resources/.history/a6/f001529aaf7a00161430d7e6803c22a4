@@ -1,0 +1,85 @@
+package com.cognizant.ctscandidates.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cognizant.ctscandidates.bo.TimelineEvent;
+import com.cognizant.ctscandidates.dao.EventDAO;
+
+@Service
+@Transactional
+public class EventServiceImp implements EventService {
+
+	@Autowired
+	private EventDAO eventDAO;
+
+	@Override
+	public Long save(TimelineEvent timelineEvent) {
+		return eventDAO.save(timelineEvent);
+	}
+
+	@Override
+	public void update(TimelineEvent timelineEvent) {
+		eventDAO.update(timelineEvent);
+	}
+
+	@Override
+	public void delete(Long id) {
+		eventDAO.delete(id);
+	}
+
+	@Override
+	public TimelineEvent searchById(Long id) {
+		return eventDAO.searchById(id);
+	}
+
+	@Override
+	public List<TimelineEvent> getAll() {
+		return eventDAO.getAll();
+	}
+
+	@Override
+	public List<TimelineEvent> getAll(int page, int rows) {
+
+		return eventDAO.getAll();
+	}
+
+	@Override
+	public Long count() {
+		return eventDAO.count();
+	}
+
+	//translates an event name to percentage to show in the
+	//front end progress bar
+	@Override
+	public Double convertNameToDouble(String eventName) {
+		
+		eventName = eventName.toLowerCase();
+
+		Double progress = null;
+
+		switch (eventName) {
+		case "cv received":
+			progress = 20.0;
+			break;
+		case "first call":
+			progress = 40.0;
+			break;
+		case "first intterview":
+			progress = 60.0;
+			break;
+		case "technical interview":
+			progress = 80.0;
+			break;
+		case "hired":
+			progress = 100.0;
+			break;
+		}
+
+		return progress;
+	}
+
+}

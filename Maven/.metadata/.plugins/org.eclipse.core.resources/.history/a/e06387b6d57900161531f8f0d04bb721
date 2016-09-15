@@ -1,0 +1,32 @@
+body {
+	padding-top: 2em;
+}
+
+section {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+#timelineCheckboxes {
+	display: block;
+	width: 100%;
+}
+
+#timeline p {
+	font-size: 16px !important;
+	font-weight: bold;
+}
+
+#timeline .row {
+	padding: .5em;
+}
+
+.main-row {
+	-webkit-box-shadow: 5px 5px 2px 0px rgba(180,180,180,1);
+	-moz-box-shadow: 5px 5px 2px 0px rgba(180,180,180,1);
+	box-shadow: 5px 5px 2px 0px rgba(180,180,180,1);
+	
+	border-color: #777777;
+	border-width: 1px;
+	background-color: #EEEEEE;
+}

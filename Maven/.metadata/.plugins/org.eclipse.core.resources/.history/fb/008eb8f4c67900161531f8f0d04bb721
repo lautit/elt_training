@@ -1,0 +1,21 @@
+body {
+	padding-top: 2em;
+}
+
+section {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+#timelineCheckboxes {
+	display: block;
+	width: 100%;
+}
+
+#timeline > div > p {
+	font-size: 16px !important;
+}
+
+#timeline > div > .row {
+	padding: 1em;
+}

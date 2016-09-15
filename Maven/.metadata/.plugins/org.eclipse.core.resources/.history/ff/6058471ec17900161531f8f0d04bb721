@@ -1,0 +1,16 @@
+#timeLineData{
+	margin: 0 auto;
+}
+.timeLineItem{
+	float: left;
+	padding: .3em;
+}
+#close-TL{
+	margin-top: 1em;
+}
+.test{
+	background-color: red;
+}
+body{
+	padding-top:100px;
+}

@@ -1,0 +1,26 @@
+//encuentra el valor de la barra de progreso
+$(document).ready(function () {
+
+	/*
+	$('#timeLineContainer').find(".checkProgress").change(function() {
+		if ($(this).is(":checked")) {
+			var prog = $(this).data("progress");
+			$('#statusBarr').css('width', prog + "%");
+			$(this).next().attr("disabled", true);
+		}
+	});
+	*/
+
+	console.log("hola");
+	var firstCheckbox = $(':checkbox').first();
+	console.log("hola");
+	if(!firstCheckbox.is(':checked')) {
+		console.log("hola");
+		if(firstCheckbox.is(':disabled')) {
+			console.log("hola");
+			firstCheckbox.removeAttr('disabled');
+			console.log("hola");
+		}
+	}
+	
+});

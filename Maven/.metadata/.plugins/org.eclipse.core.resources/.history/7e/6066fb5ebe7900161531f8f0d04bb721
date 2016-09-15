@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:import url="/templates/top.jsp" />
+
+<section id="timeline">
+	<div class="container">
+		<div class="row">
+			<h2>Timeline</h2>
+			<div class="col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div id="timeLineData">
+							<table class="table-bordered table-striped">
+								<tr>
+									<th>Timeline Id</th>
+									<th>Job title</th>
+									<th>Grade</th>
+									<th>Start Date</th>
+									<th>Description Form ID</th>
+								</tr>
+								<tr>
+									<td>1234</td>
+									<td>Java Programmer</td>
+									<td>Project Manager</td>
+									<td>12/12/12</td>
+									<td>10230123</td>
+								</tr>
+							</table>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" id="statusBarr" role="progressbar"
+								style="width: 0%"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="<c:url value="/js/timeline.js"/>"></script>
+<c:import url="/templates/bot.jsp" />

@@ -1,0 +1,26 @@
+//encuentra el valor de la barra de progreso
+$(document).ready(function () {
+
+	function enableCheckbox(checkbox) {
+		if (!checkbox.is(':checked')) {
+			if (checkbox.is(':disabled')) {
+				checkbox.removeAttr('disabled');
+			}
+		}
+	}
+
+	var firstCheckbox = $(':checkbox').first();
+	if (!firstCheckbox.is(':checked')) {
+		if (firstCheckbox.is(':disabled')) {
+			firstCheckbox.removeAttr('disabled');
+		}
+	}
+
+	$(':checkbox').change(function () {
+		if ($(this).is(':checked')) {
+			console.log($(this));
+			console.log($(this).next());
+			enableCheckbox($(this).next());
+		}
+	});
+});

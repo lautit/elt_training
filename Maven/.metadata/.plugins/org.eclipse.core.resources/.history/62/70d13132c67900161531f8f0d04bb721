@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:import url="/templates/top.jsp" />
+
+<section class="container" id="timeline">
+	<div class="row">
+		<h2>Timeline</h2>
+		<div class="col-md-12 container-fluid">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1" id="timeLineData">
+					<div class="row">
+						<div class="col-md-2">
+							<p>Timeline ID: </p>
+							<span>1234</span>
+						</div>
+						<div class="col-md-2">
+							<p>Job Title: </p>
+							<span>Java Programmer</span>
+						</div>
+						<div class="col-md-2">
+							<p>Grade: </p>
+							<span>Project Manager</span>
+						</div>
+						<div class="col-md-2">
+							<p>Start Date: </p>
+							<span>12/12/12</span>
+						</div>
+						<div class="col-md-2">
+							<p>Description Form ID: </p>
+							<span>10230123</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="progress col-md-12" id="progressBar">
+					<div class="progress-bar" id="statusBarr" role="progressbar"
+						style="width: 0%"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="checkboxes col-md-12" id="timelineCheckboxes">
+					<div class="row">
+						<div class="col-md-2">
+							<label><input type="checkbox" class="progressCheckboxes"
+								id="newCandidate"> New Candidate</label>
+						</div>
+						<div class="col-md-2">
+							<label><input type="checkbox" class="progressCheckboxes"
+								id="firstCall"> First Call</label>
+						</div>
+						<div class="col-md-2">
+							<label><input type="checkbox" class="progressCheckboxes"
+								id="firstInterview"> First Interview</label>
+						</div>
+						<div class="col-md-2">
+							<label><input type="checkbox" class="progressCheckboxes"
+								id="techInterview"> Technical Interview</label>
+						</div>
+						<div class="col-md-2">
+							<label><input type="checkbox" class="progressCheckboxes"
+								id="healthTests"> Health Tests</label>
+						</div>
+						<div class="col-md-2">
+							<label><input type="checkbox" class="progressCheckboxes"
+								id="hired"> Hired</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="<c:url value="/js/timeline.js"/>"></script>
+<c:import url="/templates/bot.jsp" />

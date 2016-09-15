@@ -1,0 +1,27 @@
+package com.cognizant.ctscandidates.services;
+
+import java.util.List;
+
+import com.cognizant.ctscandidates.bo.TimelineEvent;
+
+public interface EventService {
+
+	Long count();
+
+	Long save(TimelineEvent timelineEvent);
+
+	void update(TimelineEvent timelineEvent);
+
+	void delete(Long id);
+
+	TimelineEvent searchById(Long id);
+
+	List<TimelineEvent> getAll();
+
+	List<TimelineEvent> getAll(int page, int rows);
+	
+	Double convertNameToDouble(String eventName);
+
+	//add service methods
+	
+}

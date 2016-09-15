@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="proyectocapadatos (1)" />
+        <module name="proyectocapadatos (2)" />
+        <module name="proyectocapadatos (4)" />
+        <module name="proyectocapapresentacion (2)" />
+        <module name="proyectocapapresentacion (3)" />
+        <module name="proyectocapapresentacion (4)" />
+        <module name="proyectocapaservicio (1)" />
+        <module name="proyectocapaservicio (2)" />
+        <module name="proyectocapaservicio (4)" />
+      </profile>
+      <profile default="false" name="Annotation profile for proyectogeneral" enabled="true">
+        <sourceOutputDir name="../../proyectocapaservicio/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../proyectocapaservicio/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="proyectocapaservicio (3)" />
+      </profile>
+      <profile default="false" name="Annotation profile for proyectocapadatos (3)" enabled="true">
+        <sourceOutputDir name="target/classes/META-INF/maven/edu.curso.java/proyectocapadatos/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/classes/META-INF/maven/edu.curso.java/proyectocapadatos/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="proyectocapadatos (3)" />
+      </profile>
+      <profile default="false" name="Annotation profile for proyectocapapresentacion Maven Webapp" enabled="true">
+        <sourceOutputDir name="../proyectogeneral/proyectocapapresentacion/target/m2e-wtp/web-resources/META-INF/maven/edu.curso.java/proyectocapapresentacion/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../proyectogeneral/proyectocapapresentacion/target/m2e-wtp/web-resources/META-INF/maven/edu.curso.java/proyectocapapresentacion/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="proyectocapapresentacion (1)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="proyectocapadatos (1)" target="1.5" />
+      <module name="proyectocapadatos (2)" target="1.5" />
+      <module name="proyectocapadatos (3)" target="1.5" />
+      <module name="proyectocapadatos (4)" target="1.5" />
+      <module name="proyectocapapresentacion (1)" target="1.5" />
+      <module name="proyectocapapresentacion (2)" target="1.5" />
+      <module name="proyectocapapresentacion (3)" target="1.5" />
+      <module name="proyectocapapresentacion (4)" target="1.5" />
+      <module name="proyectocapaservicio (1)" target="1.5" />
+      <module name="proyectocapaservicio (2)" target="1.5" />
+      <module name="proyectocapaservicio (3)" target="1.5" />
+      <module name="proyectocapaservicio (4)" target="1.5" />
+      <module name="proyectogeneral" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

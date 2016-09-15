@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/proyectocapadatos" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proyectocapadatos/target/classes/META-INF/maven/edu.curso.java/proyectocapadatos" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proyectocapaservicio" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proyectocapaservicio/target/classes/META-INF/maven/edu.curso.java/proyectocapaservicio" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proyectogeneral/proyectocapadatos" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proyectogeneral/proyectocapadatos/target/classes/META-INF/maven/edu.curso.java/proyectocapadatos" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proyectogeneral/proyectocapaservicio" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proyectogeneral/proyectocapaservicio/target/classes/META-INF/maven/edu.curso.java/proyectocapaservicio" charset="UTF-8" />
+  </component>
+</project>

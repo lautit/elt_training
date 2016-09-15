@@ -1,0 +1,13 @@
+body {
+	padding-top: 2em;
+}
+
+section {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.checkboxes {
+	display: block;
+	width: autoM
+}
